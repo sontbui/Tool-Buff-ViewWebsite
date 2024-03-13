@@ -9,14 +9,14 @@ public class WebPageLoader {
         try {
             // Tạo đối tượng Desktop
             Desktop desktop = Desktop.getDesktop();
-            int i = 0;
+            int i = 2780;
 
             // Mở trang web trong trình duyệt mặc định của hệ thống
             while(true){
-                
                 desktop.browse(new URI(url));
-                Thread.sleep(1500);
                 System.out.println(i++);
+                Thread.sleep(1500);
+                System.gc();
             }
         } catch (Exception e) {
             e.printStackTrace();
